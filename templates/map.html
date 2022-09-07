@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_cc2d2626fcba17afa2613a384903bbab {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_cc2d2626fcba17afa2613a384903bbab" ></div>
+        
+</body>
+<script>    
+    
+            var map_cc2d2626fcba17afa2613a384903bbab = L.map(
+                "map_cc2d2626fcba17afa2613a384903bbab",
+                {
+                    center: [40.015, -105.2705],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 3,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_dce6b5c2cd5198c71c46590f7cc8791a = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_cc2d2626fcba17afa2613a384903bbab);
+        
+    
+            var marker_8f1a69d6218123d1a3f63dca979cb0c2 = L.marker(
+                [52.3824, 4.8995],
+                {}
+            ).addTo(map_cc2d2626fcba17afa2613a384903bbab);
+        
+    
+            var icon_cb0fce4d517b024da5332acb9cb13654 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_8f1a69d6218123d1a3f63dca979cb0c2.setIcon(icon_cb0fce4d517b024da5332acb9cb13654);
+        
+    
+        var popup_9fdca57186b7ccca55f1d36045d53ffd = L.popup({"maxWidth": "100%"});
+
+        
+            var html_126d526f2c8ebefa9efd83a9fdc876e8 = $(`<div id="html_126d526f2c8ebefa9efd83a9fdc876e8" style="width: 100.0%; height: 100.0%;"><div align="center"><h4><img src="icons/phish.png" width=50 height=50><br><strong>Phishing attack!<br></strong><br>https://sugimoto.cyou/octavia.php\n\n185.255.120.27\n\n<br><font color="MediumVioletRed">Discovered on:2022-09-06T01:51:08.000Z,2022-09-06T01:51:08.000Z</font><br><br><font><strong>IP Address :</strong> 185.255.120.27</font><br><font><strong>Location :</strong>Amsterdam, Nederland</font><br><font> <strong>Registrar</strong> : Private</font><br><br>Error checking URL status<br></h4></div></div>`)[0];
+            popup_9fdca57186b7ccca55f1d36045d53ffd.setContent(html_126d526f2c8ebefa9efd83a9fdc876e8);
+        
+
+        marker_8f1a69d6218123d1a3f63dca979cb0c2.bindPopup(popup_9fdca57186b7ccca55f1d36045d53ffd)
+        ;
+
+        
+    
+    
+            var marker_64d11510a846026d0347bfc52498d4f4 = L.marker(
+                [37.751, -97.822],
+                {}
+            ).addTo(map_cc2d2626fcba17afa2613a384903bbab);
+        
+    
+            var icon_5fb8263925ab37f1c0a2b63f1ce045e4 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_64d11510a846026d0347bfc52498d4f4.setIcon(icon_5fb8263925ab37f1c0a2b63f1ce045e4);
+        
+    
+        var popup_79950e6e7cff290229697ff406adceb8 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_643ea2c651f0c801987d0a3422d955f3 = $(`<div id="html_643ea2c651f0c801987d0a3422d955f3" style="width: 100.0%; height: 100.0%;"><div align="center"><h4><img src="icons/phish.png" width=50 height=50><br><strong>Phishing attack!<br></strong><br>https://livertttss2.xyz/admin/delete_channel.php<br><font color="MediumVioletRed">Discovered on:2022-09-06T01:53:47.000Z,2022-09-06T01:53:47.000Z</font><br><br><font><strong>IP Address :</strong> 104.21.10.169</font><br><font><strong>Location :</strong>Kansas, United States</font><br><font> <strong>Registrar</strong> : NAMECHEAP INC</font><br><br><font color="green">URL is inactive</font><br></h4></div></div>`)[0];
+            popup_79950e6e7cff290229697ff406adceb8.setContent(html_643ea2c651f0c801987d0a3422d955f3);
+        
+
+        marker_64d11510a846026d0347bfc52498d4f4.bindPopup(popup_79950e6e7cff290229697ff406adceb8)
+        ;
+
+        
+    
+    
+            var marker_6573ad32961f9cb048b6e678b7a42e90 = L.marker(
+                [37.751, -97.822],
+                {}
+            ).addTo(map_cc2d2626fcba17afa2613a384903bbab);
+        
+    
+            var icon_f16fd9914f6a199169763d6e351ff8c6 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_6573ad32961f9cb048b6e678b7a42e90.setIcon(icon_f16fd9914f6a199169763d6e351ff8c6);
+        
+    
+        var popup_c30e0b8c09a364a9d79d1d232ae5a379 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ed79dd1194d823048c8f4109c50617e0 = $(`<div id="html_ed79dd1194d823048c8f4109c50617e0" style="width: 100.0%; height: 100.0%;"><div align="center"><h4><img src="icons/phish.png" width=50 height=50><br><strong>Phishing attack!<br></strong><br>https://livertttss2.xyz/admin/version.php<br><font color="MediumVioletRed">Discovered on:2022-09-06T01:57:07.000Z,2022-09-06T01:57:07.000Z</font><br><br><font><strong>IP Address :</strong> 172.67.146.32</font><br><font><strong>Location :</strong>Kansas, United States</font><br><font> <strong>Registrar</strong> : NAMECHEAP INC</font><br><br><font color="green">URL is inactive</font><br></h4></div></div>`)[0];
+            popup_c30e0b8c09a364a9d79d1d232ae5a379.setContent(html_ed79dd1194d823048c8f4109c50617e0);
+        
+
+        marker_6573ad32961f9cb048b6e678b7a42e90.bindPopup(popup_c30e0b8c09a364a9d79d1d232ae5a379)
+        ;
+
+        
+    
+</script>
