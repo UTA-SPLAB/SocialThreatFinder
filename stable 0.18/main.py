@@ -1,4 +1,12 @@
 
+# v0.18
+
+# Fixed bug where app crashed for malformed image urls
+
+# crawl.py now fetches tweets appearing only in last 10 mins to ensure API calls are not wasted.
+
+# Note time is set to UTC by default. Adjust according to your timezone.
+
 # V0.17
   
 # Introducing the ThreatFinder REST API! 
