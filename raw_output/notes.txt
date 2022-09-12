@@ -1,4 +1,0 @@
-install tensorflow-cpu
-
-pip install tensorflow-cpu
-
