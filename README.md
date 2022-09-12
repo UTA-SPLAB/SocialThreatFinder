@@ -14,18 +14,18 @@ Consequently, a large volume of these URLs were not covered by prevalent anti-ph
 
 Thus, Social ThreatFinder (STF) attempts to provide more visibility to these reports to enhance the anti-phishing and anti-scam ecosystem. 
 
-**Our Framework**:
+##Our Framework:
 
 ![Alt text](/img/stf_framework_basic.png?raw=true "Social ThreatFinder Framework")
 
 
-**Instructions for running Social ThreatFinder (STF)**
+##Instructions for running Social ThreatFinder (STF)##
 
 **Updated: 09/12/2022, v0.19** 
 
 **Step 1:** Install the necessary libraries from the requirements.txt file:
 
-pip3 install -r requirements.txt
+*pip3 install -r requirements.txt*
 
 **Step 2:** To obtain new reports from Twitter, you will need a Twitter API access key. For full functionality, the Academic Track of the API is recommended, which can be obtained from here https://developer.twitter.com/en/products/twitter-api/academic-research
 
@@ -33,7 +33,7 @@ Note: STF also runs on regular Twitter API access from v0.19 onwards
 
 **Step 3:** After getting the API access key, configure your key with Twarc (The python library we use to collect the reports) by entering the following command in your console:
 
-twarc2 configure
+*twarc2 configure*
 
 ..and enter your Bearer Token in the resulting prompt.
 
