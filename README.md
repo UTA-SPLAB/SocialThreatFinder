@@ -57,6 +57,8 @@ The website contains three main features:
 	
 - **Interactive map:** An layout which points the location of the active and inactive phishing threats found by STF. 
 
-![Alt text](/img/stf_map.gif?raw=true "Blocklist interface")
+![Alt text](/img/stf_map.gif?raw=true "Interactive Map")
 
 - **STF API:** A REST API which can be used to obtain URLs from the STF instance running on our servers. The easiest way to access STF data without maintaining your own instance. 
+
+![Alt text](/img/stf_api_demo.PNG?raw=true "API output")
