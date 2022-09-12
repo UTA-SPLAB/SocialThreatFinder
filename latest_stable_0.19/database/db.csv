@@ -1,0 +1,3 @@
+,Tweet_id,URL,registrar_name,ip_address,URL is alive,Geo co-ordinates,Location,Creation_time,image_url,Target,ML_verdict(Experimental)
+0,1569195636469137408,https://bitmax-cb.online/site.zip,NAMECHEAP INC,162.0.232.163,999,"(43.6319, -79.3716)","Old Toronto, Canada",2022-09-12T05:26:08.000Z,https://pbs.twimg.com/media/FcbmpH2XEAEpHq8.jpg,opendir,Benign/Inactive
+1,1569199060728352768,http://sumonarafin.com,IONOS SE,74.208.236.121,1,"(40.0612, -75.3999)","Tredyffrin Township, United States",2022-09-12T05:39:45.000Z,https://pbs.twimg.com/media/Fcbp-K4XgAAIiId.jpg,Unknown,
