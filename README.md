@@ -61,5 +61,5 @@ The website contains three main features:
 
 - **STF API:** A REST API which can be used to obtain URLs from the STF instance running on our servers. The easiest way to access STF data without maintaining your own instance. 
 <p align="center">
-<img src="/img/stf_api_demo.png" width="128" height="128"/>
+<img src="/img/stf_api_demo.png" width="480" height="600"/>
 <\p>
