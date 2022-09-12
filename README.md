@@ -18,7 +18,6 @@ Thus, Social ThreatFinder (STF) attempts to provide more visibility to these rep
 
 ![Alt text](/img/stf_framework_basic.png?raw=true "Social ThreatFinder Framework")
 
-
 ## Instructions for running Social ThreatFinder (STF)
 
 **Updated: 09/12/2022, v0.19** 
@@ -45,4 +44,16 @@ https://skolo.online/documents/webscrapping/
 
 python3 run_stf.py
 
+**Step 6:** You can view the output under the generated db.csv file under 'database' folder.
 
+## Social ThreatFinder website (An early look)
+
+This repository includes all the core functionality which powers the Social ThreatFinder website, which is currently under development. 
+The website contains three main features:
+
+- **The blocklist:** A simple interface which shows all phishing reports that have been collected and analyzed by the STF instance on our server. This blocklist is currently updated every 5 mins.  
+![Alt text](/img/stf_database.png?raw=true "Blocklist interface")
+	
+- **Interactive map:** An layout which points the location of the active and inactive phishing threats found by STF. 
+![Alt text](/img/stf_map.gif?raw=true "Blocklist interface")
+- **STF API:** A REST API which can be used to obtain URLs from the STF instance running on our servers. The easiest way to access STF data without maintaining your own instance. 
