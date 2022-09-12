@@ -60,5 +60,6 @@ The website contains three main features:
 ![Alt text](/img/stf_map.gif?raw=true "Interactive Map")
 
 - **STF API:** A REST API which can be used to obtain URLs from the STF instance running on our servers. The easiest way to access STF data without maintaining your own instance. 
-
+<p align="center">
 ![Alt text](/img/stf_api_demo.png "API output")
+<\p>
