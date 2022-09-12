@@ -39,7 +39,7 @@ Note: STF also runs on regular Twitter API access from v0.19 onwards
 
 **Step 4:** STF uses a CNN based classifier to identify if the reported URL is phishing or benign by analyzing the website screenshot. For this feature, you need to install and setup chromedriver on your system/environment. 
 
-https://skolo.online/documents/webscrapping/#pre-requisites
+https://skolo.online/documents/webscrapping/
 
 **Step 5:** You can now launch Social ThreatFinder by running:
 
