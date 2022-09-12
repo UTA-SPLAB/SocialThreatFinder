@@ -6,11 +6,11 @@ The creation of this tool was motivated by our findings in “Evaluating the Eff
 
 **The contributions of this work were as follows:**
 
-We identified several security conscious individuals on Twitter who regularly shared reports about new phishing websites. These reports often contained more information regarding the attack, when compared to two of the most popular anti-phishing blocklists.
+-We identified several security conscious individuals on Twitter who regularly shared reports about new phishing websites. These reports often contained more information regarding the attack, when compared to two of the most popular anti-phishing blocklists.
 
-Website takedown for the reported URLs was significantly slower than the attacks which were covered by popular blocklists. This resulted in these attacks staying online for an extended period of time.
+-Website takedown for the reported URLs was significantly slower than the attacks which were covered by popular blocklists. This resulted in these attacks staying online for an extended period of time.
 
-Consequently, a large volume of these URLs were not covered by prevalent anti-phishing tools and blocklists. 
+-Consequently, a large volume of these URLs were not covered by prevalent anti-phishing tools and blocklists. 
 
 Thus, Social ThreatFinder (STF) attempts to provide more visibility to these reports to enhance the anti-phishing and anti-scam ecosystem. 
 
