@@ -14,7 +14,7 @@ Consequently, a large volume of these URLs were not covered by prevalent anti-ph
 
 Thus, Social ThreatFinder (STF) attempts to provide more visibility to these reports to enhance the anti-phishing and anti-scam ecosystem. 
 
-## Our Framework:
+## Our Framework
 
 ![Alt text](/img/stf_framework_basic.png?raw=true "Social ThreatFinder Framework")
 
