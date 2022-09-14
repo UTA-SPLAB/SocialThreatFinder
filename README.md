@@ -66,11 +66,11 @@ The website contains three main features:
 
 If you liked our word, please consider citing us:
 
-``@inproceedings{roy2021evaluating,
+```@inproceedings{roy2021evaluating,
   title={Evaluating the effectiveness of Phishing Reports on Twitter},
   author={Roy, Sayak Saha and Karanjit, Unique and Nilizadeh, Shirin},
   booktitle={2021 APWG Symposium on Electronic Crime Research (eCrime)},
   pages={1--13},
   year={2021},
   organization={IEEE}
-}``
+}```
