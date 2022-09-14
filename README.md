@@ -64,7 +64,9 @@ The website contains three main features:
 <img src="/img/stf_api_demo.png" width="500" height="280"/>
 </p>
 
-If you liked our word, please consider citing us:
+For any queries, feel free to reach out to Sayak Saha Roy (sayak.saharoy@mavs.uta.edu) and Shirin Nilizadeh (shirin.nilizadeh@uta.edu).
+
+If you liked this work, please consider citing our publication:
 
 ```
 @inproceedings{roy2021evaluating,
@@ -75,3 +77,4 @@ If you liked our word, please consider citing us:
   year={2021},
   organization={IEEE}
 }
+
