@@ -64,8 +64,6 @@ The website contains three main features:
 <img src="/img/stf_api_demo.png" width="500" height="280"/>
 </p>
 
-For any queries, feel free to reach out to Sayak Saha Roy (sayak.saharoy@mavs.uta.edu) and Shirin Nilizadeh (shirin.nilizadeh@uta.edu).
-
 If you liked this work, please consider citing our publication:
 
 ```
@@ -77,4 +75,4 @@ If you liked this work, please consider citing our publication:
   year={2021},
   organization={IEEE}
 }
-
+For any queries, feel free to reach out to Sayak Saha Roy (sayak.saharoy@mavs.uta.edu) and Shirin Nilizadeh (shirin.nilizadeh@uta.edu).
