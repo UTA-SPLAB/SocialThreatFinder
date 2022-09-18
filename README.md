@@ -61,7 +61,7 @@ python3 run_stf.py
 python3 run_stf.py lite
 ```
 
-**WARNING:** Running in *lite* mode might give not give you the most recent report data. It is recomended that you run STF in **Default** mode only.  
+**WARNING:** Due to API limitations, running in *'Lite'* mode might **NOT** give you the most up-to-date reporter data. It is recomended that you run STF in **Default** mode only.  
 
 
 **Step 6:** You can view the output under database/db.csv. 
