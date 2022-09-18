@@ -3,6 +3,10 @@ from stf_main_driver import *
 
 def run(): # Runs Social ThreatFinder
 
+    from pyfiglet import Figlet
+    custom_fig = Figlet(font='big')
+    print(custom_fig.renderText('Social ThreatFinder'))
+
     while 1: 
         
         print("Refreshing feed")

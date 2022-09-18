@@ -300,7 +300,7 @@ def run_iteration():
     try:
         if sys.argv[1]=='lite':
             print("Run Social ThreatFinder in Lite Mode.") 
-            print("WARNING: Please consider using the Default (Academic Key mode) for getting the most recent reports.")
+            print(colored("WARNING: Please consider using the Default (Academic Key mode) for getting the most recent reports.", 'red'))
             collect_tweets('lite','hxxps') # Mode= 1) default for full archive (Twitter Academic access key needed), and 2) lite for regular Twitter API tweets. See drivers/crawl.py for more info.
             collect_tweets('lite','hxxp')
     except:
