@@ -2,7 +2,7 @@
 
 Social ThreatFinder is an OSINT (Open source intelligence) tool which identifies new social engineering threats, such as phishing websites, that are reported on social media networks and provides additional reliable and feature-rich data about these attacks under an easily accessible blocklist. 
 
-The creation of this tool was motivated by our findings in “Evaluating the Effectiveness of Phishing Reports on Twitter”, published at APWG eCrime 2021. [Link to the paper](https://ieeexplore.ieee.org/abstract/document/9738786?casa_token=FjAIF57PrIUAAAAA:timEgDLq87uH-jxlNFpAbrDjAxesCbdHV3Rg05ywazIEAkLi0Bb_JVNAfhNAOR0RrczqTwk3M_Y). 
+The creation of this tool was motivated by our findings in “Evaluating the Effectiveness of Phishing Reports on Twitter”, published at APWG eCrime 2021.[Link to the paper](https://ieeexplore.ieee.org/abstract/document/9738786?casa_token=FjAIF57PrIUAAAAA:timEgDLq87uH-jxlNFpAbrDjAxesCbdHV3Rg05ywazIEAkLi0Bb_JVNAfhNAOR0RrczqTwk3M_Y). 
 
 **The contributions of this work are as follows:**
 
@@ -29,7 +29,7 @@ Below is basic illustration of the Social ThreatFinder framework (in its current
 **Step 1:** Install the necessary libraries from the requirements.txt file:
 
 ```
-*pip3 install -r requirements.txt*
+pip3 install -r requirements.txt
 ```
 
 **Step 2:** To obtain new reports from Twitter, you will need a Twitter API access key. For full functionality, the Academic Track of the API is recommended, which can be obtained from here https://developer.twitter.com/en/products/twitter-api/academic-research
@@ -39,7 +39,7 @@ Note: STF also runs on regular Twitter API access from v0.19 onwards
 **Step 3:** After getting the API access key, configure your key with Twarc (The python library we use to collect the reports) by entering the following command in your console:
 
 ```
-*twarc2 configure*
+twarc2 configure
 ```
 
 ..and enter your Bearer Token in the resulting prompt.
@@ -87,7 +87,7 @@ Brief overview of some experimental features that we are under work and we are p
 ###### \* Preliminary comparison with URLLib, PhishTank and eCrimeX data.
 
 
-If you liked this work, please consider citing our publication:
+If you like this work, please consider citing our publication:
 
 ```
 @inproceedings{roy2021evaluating,
