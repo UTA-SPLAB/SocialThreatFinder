@@ -41,6 +41,7 @@ from urllib.parse import urlparse
 from os.path import exists as file_exists
 import csv   
 import string 
+import sys
 
 import signal
 from contextlib import contextmanager
@@ -295,9 +296,19 @@ def process(filename):
    
 
 def run_iteration():
-    collect_tweets('lite','hxxps') # Mode= 1) default for full archive (Twitter Academic access key needed), and 2) lite for regular Twitter API tweets. See drivers/crawl.py for more info.
+    if sys.argv[1]=='lite':
+        print("Run Social ThreatFinder in Lite Mode.") 
+        print("WARNING: Please consider using the Default (Academic Key mode) for getting the most recent reports.")
+        collect_tweets('lite','hxxps') # Mode= 1) default for full archive (Twitter Academic access key needed), and 2) lite for regular Twitter API tweets. See drivers/crawl.py for more info.
+        collect_tweets('lite','hxxp')
+    else:
+        print("Run Social ThreatFinder in Default Mode.") 
+        collect_tweets('default','hxxps') # Mode= 1) default for full archive (Twitter Academic access key needed), and 2) lite for regular Twitter API tweets. See drivers/crawl.py for more info.
+        collect_tweets('default','hxxp')
+
+
     process('phishing_hxxps')
-    collect_tweets('lite','hxxp')
+    
     process('phishing_hxxp')
     
 
