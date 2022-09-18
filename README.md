@@ -4,7 +4,7 @@ Social ThreatFinder is an OSINT (Open source intelligence) tool which identifies
 
 The creation of this tool was motivated by our findings in “Evaluating the Effectiveness of Phishing Reports on Twitter”, published at APWG eCrime 2021. [Link to the paper](https://ieeexplore.ieee.org/abstract/document/9738786?casa_token=FjAIF57PrIUAAAAA:timEgDLq87uH-jxlNFpAbrDjAxesCbdHV3Rg05ywazIEAkLi0Bb_JVNAfhNAOR0RrczqTwk3M_Y). 
 
-**The contributions of this work were as follows:**
+**The contributions of this work are as follows:**
 
 - We identified several security conscious individuals on Twitter who regularly shared reports about new phishing websites. These reports often contained more information regarding the attack, when compared to two of the most popular anti-phishing blocklists.
 
@@ -14,17 +14,23 @@ The creation of this tool was motivated by our findings in “Evaluating the Eff
 
 Thus, Social ThreatFinder (STF) attempts to provide more visibility to these reports to enhance the anti-phishing and anti-scam ecosystem. 
 
-## Our Framework
+## Section 1) Open-source code-base and our Framework
+
+This repository includes all the core functionality which powers the Social ThreatFinder website, which is currently under development. By running this codebase, you can build your own URL database (from scratch) using phishing reports shared on Twitter. The full database can be accessed at anytime from the easy to use Social ThreatFinder website, and its provided API (coming soon). For more information about the web interface and an early look, please check **Section 3** below.
+
+Below is basic illustration of the Social ThreatFinder framework (in its current stable state). Note that we are several experimental features (non-stable) which we are currently testing **(See Section 4)**, and they have thus been ommited from this framework.  
 
 ![Alt text](/img/stf_framework_basic.png?raw=true "Social ThreatFinder Framework")
 
-## Instructions for running Social ThreatFinder (STF)
+## Section 2) Instructions for running Social ThreatFinder (STF)
 
 **Updated: 09/12/2022, v0.19** 
 
 **Step 1:** Install the necessary libraries from the requirements.txt file:
 
+```
 *pip3 install -r requirements.txt*
+```
 
 **Step 2:** To obtain new reports from Twitter, you will need a Twitter API access key. For full functionality, the Academic Track of the API is recommended, which can be obtained from here https://developer.twitter.com/en/products/twitter-api/academic-research
 
@@ -32,7 +38,9 @@ Note: STF also runs on regular Twitter API access from v0.19 onwards
 
 **Step 3:** After getting the API access key, configure your key with Twarc (The python library we use to collect the reports) by entering the following command in your console:
 
+```
 *twarc2 configure*
+```
 
 ..and enter your Bearer Token in the resulting prompt.
 
@@ -42,14 +50,17 @@ https://skolo.online/documents/webscrapping/
 
 **Step 5:** You can now launch Social ThreatFinder by running:
 
+```
 python3 run_stf.py
+```
 
-**Step 6:** You can view the output under the generated db.csv file under 'database' folder.
+**Step 6:** You can view the output under database/db.csv. 
 
-## Social ThreatFinder website (An early look)
+## Section 3) Social ThreatFinder website (An early look)
 
-This repository includes all the core functionality which powers the Social ThreatFinder website, which is currently under development. 
-The website contains three main features:
+The full Social ThreatFinder website is currently in development and is expected to be released in *mid November 2022*. 
+
+Check out the three main features of the website, along with an early look below:
 
 - **The blocklist:** A simple interface which shows all phishing reports that have been collected and analyzed by the STF instance on our server. This blocklist is currently updated every 5 mins.  
 
@@ -59,10 +70,22 @@ The website contains three main features:
 
 ![Alt text](/img/stf_map.gif?raw=true "Interactive Map")
 
-- **STF API:** A REST API which can be used to obtain URLs from the STF instance running on our servers. The easiest way to access STF data without maintaining your own instance. 
+- **STF API:** A REST API which can be used to obtain URLs from the STF instance running on our servers. The easiest way to access STF data without maintaining your own local instance. 
 <p align="center">
 <img src="/img/stf_api_demo.png" width="500" height="280"/>
 </p>
+
+## Section 4) Experimental features
+
+Brief overview of some experimental features that we are under work and we are planning to release in future stable builds:
+
+1) Identifying new social engineering attacks from narratives shared by users on Twitter, Facebook and Reddit. 
+2) Checking the reliability of new phishing reporters (on Twitter) based on their account heuristics.
+3) An ML based tool which provides better identification\* of whether the website is active/inactive/parked, when compared against other open-source anti-phishing implementations.
+4) Focus on covering of smartphone specific social engineering attacks 
+
+###### \* Preliminary comparison with URLLib, PhishTank and eCrimeX data.
+
 
 If you liked this work, please consider citing our publication:
 
