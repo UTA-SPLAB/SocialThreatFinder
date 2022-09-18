@@ -34,15 +34,15 @@ pip3 install -r requirements.txt
 
 **Step 2:** To obtain new reports from Twitter, you will need a Twitter API access key. For full functionality, the Academic Track of the API is recommended, which can be obtained from here https://developer.twitter.com/en/products/twitter-api/academic-research
 
-Note: STF also runs on regular Twitter API access from v0.19 onwards
-
-**Step 3:** After getting the API access key, configure your key with Twarc (The python library we use to collect the reports) by entering the following command in your console:
+**Step 3:** After getting the API access key, configure your key with Twarc (The python library we use to collect the reports) by entering the following command in your console, and enter your Bearer Token in the resulting prompt.:
 
 ```
 twarc2 configure
+Please enter your Bearer Token (leave blank to skip to API key configuration): 
 ```
 
-..and enter your Bearer Token in the resulting prompt.
+**Note:** STF also runs on regular Twitter API access (non-academic, 'Lite' mode) from stable v0.19 onwards. You can sign up for a regular API key on https://developer.twitter.com/en/docs/twitter-api/getting-started/getting-access-to-the-twitter-api. See how to run STF in 'Lite' mode in Step 5.2
+
 
 **Step 4:** STF uses a CNN based classifier to identify if the reported URL is phishing or benign by analyzing the website screenshot. For this feature, you need to install and setup chromedriver on your system/environment. 
 
@@ -50,9 +50,19 @@ https://skolo.online/documents/webscrapping/
 
 **Step 5:** You can now launch Social ThreatFinder by running:
 
+5.1) In **Default** mode (using Twitter Academic key access):
+
 ```
 python3 run_stf.py
 ```
+5.2) In **Default** mode (using Twitter Academic key access):
+
+```
+python3 run_stf.py lite
+```
+
+**WARNING:** Running in *lite* mode might give not give you the most recent report data. It is recomended that you run STF in Default mode only.  
+
 
 **Step 6:** You can view the output under database/db.csv. 
 
