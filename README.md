@@ -50,18 +50,18 @@ https://skolo.online/documents/webscrapping/
 
 **Step 5:** You can now launch Social ThreatFinder by running:
 
-5.1) In **Default** mode (using Twitter Academic key access):
+5.1) In **Default** mode (using Twitter Academic API key access):
 
 ```
 python3 run_stf.py
 ```
-5.2) In **Default** mode (using Twitter Academic key access):
+5.2) In **'Lite'** mode (using Regular Twitter API key access):
 
 ```
 python3 run_stf.py lite
 ```
 
-**WARNING:** Running in *lite* mode might give not give you the most recent report data. It is recomended that you run STF in Default mode only.  
+**WARNING:** Running in *lite* mode might give not give you the most recent report data. It is recomended that you run STF in **Default** mode only.  
 
 
 **Step 6:** You can view the output under database/db.csv. 
