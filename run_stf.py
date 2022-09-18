@@ -15,11 +15,11 @@ def run(): # Runs Social ThreatFinder
     while 1: 
         try:
             if sys.argv[1]=='lite':
-                print("Run Social ThreatFinder in Lite Mode.") 
+                print("Running Social ThreatFinder in Lite Mode.") 
                 print(colored("WARNING: Please consider using the Default (Academic Key mode) for getting the most recent reports.", 'red'))
 
         except:
-            print("Run Social ThreatFinder in Default Mode.") 
+            print("Running Social ThreatFinder in Default Mode.") 
 
         print("Refreshing feed")
         blockPrint() # Hide console output 
