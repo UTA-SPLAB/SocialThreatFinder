@@ -16,9 +16,9 @@ Thus, Social ThreatFinder (STF) attempts to provide more visibility to these rep
 
 ## 1) Open-source code-base and our Framework
 
-This repository includes all the core functionality which powers the Social ThreatFinder website, which is currently under development. By running this codebase, you can build your own URL database (from scratch) using phishing reports shared on Twitter. The full database can be accessed at anytime from the easy to use Social ThreatFinder website, and its provided API (coming soon). For more information about the web interface and an early look, please check **Section 3** below.
+This repository includes all the core functionality which powers the Social ThreatFinder website, which is currently under development. By running this codebase, you can build your own URL database (from scratch) using phishing reports shared on Twitter. The full database can be accessed at anytime from the easy to use Social ThreatFinder website, and our STF REST API (both coming soon). For more information about the web interface and an early look, please check **Section 3** below.
 
-Below is basic illustration of the Social ThreatFinder framework (in its current stable state). Note that we are several experimental features (non-stable) which we are currently testing **(See Section 4)**, and they have thus been ommited from this framework.  
+Below is basic illustration of the Social ThreatFinder framework (in its current stable state). Note that we have several experimental features (non-stable) **(See Section 4)**, that have not been included in this framework.  
 
 ![Alt text](/img/stf_framework_basic.png?raw=true "Social ThreatFinder Framework")
 
