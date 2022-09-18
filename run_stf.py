@@ -4,7 +4,7 @@ from stf_main_driver import *
 def run(): # Runs Social ThreatFinder
 
     from pyfiglet import Figlet
-    custom_fig = Figlet(font='medium')
+    custom_fig = Figlet(font='banner')
     print(custom_fig.renderText('Social ThreatFinder'))
 
     while 1: 
