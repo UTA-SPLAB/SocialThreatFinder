@@ -61,7 +61,9 @@ python3 run_stf.py
 python3 run_stf.py lite
 ```
 
-# ![Alt text](/img/stf_running.png?raw=true "Social ThreatFinder running")
+<p align="center">
+<img src="/img/stf_running.png" width="500" height="280"/>
+</p>
 
 **WARNING:** Due to API limitations, running in *'Lite'* mode might **NOT** give you the most up-to-date reporter data. It is recomended that you run STF in **Default** mode only.  
 
