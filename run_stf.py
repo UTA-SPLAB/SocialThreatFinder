@@ -21,7 +21,7 @@ def run(): # Runs Social ThreatFinder
         except:
             print("Running Social ThreatFinder in Default Mode.") 
 
-        print("Refreshing feed")
+        print("Refreshing feed..")
         blockPrint() # Hide console output 
         remove_files() # Remove hxxps and hxxp metadata from raw_output to prevent clutter
         run_iteration() # Handles all sub drivers to collect and process the reports
