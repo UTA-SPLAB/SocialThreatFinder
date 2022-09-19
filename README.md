@@ -19,7 +19,7 @@ Thus, the Social ThreatFinder framework (STF) attempts to provide more visibilit
 </p>
 
 <p align="center">
-  Example of some phishing reports on Twitter
+  <b>Example of some phishing reports found on Twitter</b>
 </p>
 
 ## 1) Open-source code-base and our Framework
