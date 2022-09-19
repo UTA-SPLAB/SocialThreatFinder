@@ -79,7 +79,7 @@ python3 run_stf.py lite
 **WARNING:** Due to Twitter API limitations, running in *'Lite'* mode *might* not give you the most up-to-date reporter data. It is recomended that you run STF in **Default** mode only.  
 
 
-**Step 7:** You can view the output under database/db.csv. 
+**Step 7:** You can view the output under **database/db.csv.** 
 
 ## 3) Social ThreatFinder website (An early look)
 
