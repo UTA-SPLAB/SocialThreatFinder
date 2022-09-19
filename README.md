@@ -37,22 +37,22 @@ The following is a basic illustration of the Social ThreatFinder framework (in i
 
 **Step 1** Create a virtual environment with Python 3.8.10
 
-**Step 2:** Install the necessary libraries from the requirements.txt file:
+**Step 2:** Install the necessary dependencies from the requirements.txt file:
 
 ```
 pip3 install -r requirements.txt
 ```
 
-**Step 3:** To obtain new reports from Twitter, you will need a Twitter API access key. For full functionality, the Academic Track of the API is recommended, which can be obtained from here https://developer.twitter.com/en/products/twitter-api/academic-research
+**Step 3:** To obtain new reports from Twitter, you will need a Twitter API access key. For full functionality, the **Academic Track** of the API is recommended, which can be obtained from here: https://developer.twitter.com/en/products/twitter-api/academic-research
 
-**Step 4:** After getting the API access key, configure your key with Twarc (The python library we use to collect the reports) by entering the following command in your console, and enter your Bearer Token in the resulting prompt.:
+**Step 4:** After getting the API access key, configure your key with Twarc (The python library we use to collect the reports) by entering the following command in your console, and enter your Bearer Token in the resulting prompt:
 
 ```
 twarc2 configure
 Please enter your Bearer Token (leave blank to skip to API key configuration): 
 ```
 
-**Note:** STF also runs on regular Twitter API access (non-academic, 'Lite' mode) from stable v0.19 onwards. You can sign up for a regular API key on https://developer.twitter.com/en/docs/twitter-api/getting-started/getting-access-to-the-twitter-api. See how to run STF in 'Lite' mode in Step 5.2
+**Note:** STF also runs on regular Twitter API access (non-academic, 'Lite' mode) from v0.19 stable onwards. You can sign up for a regular API key on https://developer.twitter.com/en/docs/twitter-api/getting-started/getting-access-to-the-twitter-api. See how to run STF in 'Lite' mode in Step 5.2
 
 
 **Step 5:** STF uses a CNN based image classifier to identify if the reported URL is phishing or benign by analyzing the website screenshot. For this feature, you need to install and setup chromedriver on your system.
