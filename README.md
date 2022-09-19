@@ -11,7 +11,7 @@ The creation of this tool was motivated by the findings in our work “Evaluatin
 - Website takedown for the reported URLs was significantly slow, with nearly 31% of these attacks remaining online even a week after the report being shared. The tweets were very rarely interacted upon by hosting providers and targetted organizations, suggesting that they had a hard time *discovering* these attacks. 
 
 
-- Consequently, an overwhelmningly large volume of these reported URLs were not covered by prevalent anti-phishing tools and blocklists, with only less than 9% of the URLs shared on Twitter overlapping with these entities.  
+- Also, a large volume of these reported URLs were not covered by prevalent anti-phishing tools and blocklists, with only less than 9% of the URLs shared on Twitter overlapping with these entities.  
 
 Thus, the Social ThreatFinder framework (STF) attempts to provide more visibility to these reports by systematizing them under one consistent and easily accessible blocklist. Regularly sharing this information with antiphishing blocklists, hosting providers and other concerned security actors can help in enhancing the response towards these emerging attacks, and in turn, also boost the prevalent anti-phishing and anti-scam ecosystem. 
 
