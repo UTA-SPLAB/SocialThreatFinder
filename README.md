@@ -1,4 +1,4 @@
-# Social Threat Finder
+# ![Alt text](/img/stf_logo.png?raw=true "Social ThreatFinder Framework")
 
 Social ThreatFinder is an OSINT (Open source intelligence) tool which identifies new social engineering threats, such as phishing websites, that are reported on social media networks and provides additional reliable and feature-rich data about these attacks under an easily accessible blocklist. 
 
