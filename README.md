@@ -14,7 +14,7 @@ The creation of this tool was motivated by our findings in “Evaluating the Eff
 
 Thus, the Social ThreatFinder framework (STF) attempts to provide more visibility to these reports by systematizing them under one consistent and easily accessible blocklist. Regularly sharing this information with both vendors and concerned security actors can help in enhancing the response towards emerging attacks, and in turn, also boost the prevalent anti-phishing and anti-scam ecosystem. 
 
-# ![Alt text](/img/phishing_reports.pdf?raw=true "Phishing Reports")
+# ![Alt text](/img/phishing_reports.png?raw=true "Phishing Reports")
 phishing_reports
 
 ## 1) Open-source code-base and our Framework
