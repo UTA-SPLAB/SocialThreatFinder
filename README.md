@@ -14,15 +14,15 @@ The creation of this tool was motivated by our findings in “Evaluating the Eff
 
 Thus, Social ThreatFinder (STF) attempts to provide more visibility to these reports to enhance the anti-phishing and anti-scam ecosystem. 
 
-## Section 1) Open-source code-base and our Framework
+## 1) Open-source code-base and our Framework
 
-This repository includes all the core functionality which powers the Social ThreatFinder website, which is currently under development. By running this codebase, you can build your own URL database (from scratch) using phishing reports shared on Twitter. The full database can be accessed at anytime from the easy to use Social ThreatFinder website, and its provided API (coming soon). For more information about the web interface and an early look, please check **Section 3** below.
+This repository includes all the core functionality which powers the Social ThreatFinder website, which is currently under development. By running this codebase, you can build your own URL database (from scratch) using phishing reports shared on Twitter. The full database can be accessed at anytime from the easy to use Social ThreatFinder website, and our STF REST API (both coming soon). For more information about the web interface and an early look, please check **Section 3** below.
 
-Below is basic illustration of the Social ThreatFinder framework (in its current stable state). Note that we are several experimental features (non-stable) which we are currently testing **(See Section 4)**, and they have thus been ommited from this framework.  
+Below is basic illustration of the Social ThreatFinder framework (in its current stable state). Note that we have several experimental features (non-stable) **(See Section 4)**, that have not been included in this framework.  
 
 ![Alt text](/img/stf_framework_basic.png?raw=true "Social ThreatFinder Framework")
 
-## Section 2) Instructions for running Social ThreatFinder (STF)
+## 2) Instructions for running Social ThreatFinder (STF)
 
 **Updated: 09/12/2022, v0.19** 
 
@@ -66,7 +66,7 @@ python3 run_stf.py lite
 
 **Step 6:** You can view the output under database/db.csv. 
 
-## Section 3) Social ThreatFinder website (An early look)
+## 3) Social ThreatFinder website (An early look)
 
 The full Social ThreatFinder website is currently in development and is expected to be released in *mid November 2022*. 
 
@@ -85,7 +85,7 @@ Check out the three main features of the website, along with an early look below
 <img src="/img/stf_api_demo.png" width="500" height="280"/>
 </p>
 
-## Section 4) Experimental features
+## 4) Experimental features
 
 Brief overview of some experimental features that we are under work and we are planning to release in future stable builds:
 
@@ -94,7 +94,7 @@ Brief overview of some experimental features that we are under work and we are p
 3) An ML based tool which provides better identification\* of whether the website is active/inactive/parked, when compared against other open-source anti-phishing implementations.
 4) Focus on covering of smartphone specific social engineering attacks 
 
-###### \* Preliminary comparison with URLLib, PhishTank and eCrimeX data.
+###### \*Preliminary comparison with URLLib, PhishTank and eCrimeX data.
 
 
 If you like this work, please consider citing our publication:
