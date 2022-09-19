@@ -1,4 +1,4 @@
-# ![Alt text](/img/stf_logo.png?raw=true "Social ThreatFinder Framework")
+# ![Alt text](/img/stf_logo.png?raw=true "Social ThreatFinder Banner")
 
 Social ThreatFinder is an OSINT (Open source intelligence) tool which identifies new social engineering threats, such as phishing websites, that are reported on social media networks and provides additional reliable and feature-rich data about these attacks under an easily accessible blocklist. 
 
@@ -13,6 +13,9 @@ The creation of this tool was motivated by our findings in “Evaluating the Eff
 - Consequently, a large volume of these reported URLs were not covered by prevalent anti-phishing tools and blocklists. 
 
 Thus, the Social ThreatFinder framework (STF) attempts to provide more visibility to these reports by systematizing them under one consistent and easily accessible blocklist. Regularly sharing this information with both vendors and concerned security actors can help in enhancing the response towards emerging attacks, and in turn, also boost the prevalent anti-phishing and anti-scam ecosystem. 
+
+# ![Alt text](/img/phishing_reports.pdf?raw=true "Phishing Reports")
+phishing_reports
 
 ## 1) Open-source code-base and our Framework
 
@@ -91,12 +94,12 @@ Check out the three main features of the website, along with an early look below
 
 ## 4) Experimental features
 
-Brief overview of some experimental features that we are under work and we are planning to release in future stable builds:
+Brief overview of some experimental features that are currently under construction with plans for release in future stable builds:
 
 1) Identifying new social engineering attacks from narratives shared by users on Twitter, Facebook and Reddit. 
 2) Checking the reliability of new phishing reporters (on Twitter) based on their account heuristics.
 3) An ML based tool which provides better identification\* of whether the website is active/inactive/parked, when compared against other open-source anti-phishing implementations.
-4) Focus on covering of smartphone specific social engineering attacks 
+4) Focus on covering smartphone specific social engineering attacks 
 
 ###### \*Preliminary comparison with URLLib, PhishTank and eCrimeX data.
 
