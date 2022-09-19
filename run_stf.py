@@ -8,7 +8,7 @@ def run(): # Runs Social ThreatFinder
 
     custom_fig = Figlet(font='big')
     print(custom_fig.renderText('Social ThreatFinder'))
-    print(colored("Version 0.19 stable, 09/18/2022", 'blue'))
+    print(colored("\t \t Version 0.19 stable, 09/18/2022", 'blue'))
     print("\n")
 
 
