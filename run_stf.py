@@ -1,6 +1,14 @@
 
 from stf_main_driver import *
 import sys
+
+# Download nltk dependencies
+
+import nltk
+nltk.download('stopwords')
+nltk.download('punkt')
+
+
 def run(): # Runs Social ThreatFinder
 
     from pyfiglet import Figlet
