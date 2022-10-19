@@ -55,18 +55,24 @@ Please enter your Bearer Token (leave blank to skip to API key configuration):
 **Note:** STF also runs on regular Twitter API access (non-academic, 'Lite' mode) from v0.19 stable onwards. You can sign up for a regular API key on https://developer.twitter.com/en/docs/twitter-api/getting-started/getting-access-to-the-twitter-api. See how to run STF in 'Lite' mode in Step 5.2
 
 
-**Step 5:** STF uses a CNN based image classifier to identify if the reported URL is phishing or benign by analyzing the website screenshot. For this feature, you need to install and setup chromedriver on your system.
+**Step 5.1:** STF uses a CNN based image classifier to identify if the reported URL is phishing or benign by analyzing the website screenshot. For this feature, you need to install and setup chromedriver on your system.
 
 https://skolo.online/documents/webscrapping/
 
+**Step 5.2:** And also install OpenCV on your system by running the following command:
+
+```
+sudo apt install libopencv-dev python3-opencv
+```
+
 **Step 6:** You can now launch Social ThreatFinder by running:
 
-5.1) In **Default** mode (using Twitter Academic API key access):
+6.1) In **Default** mode (using Twitter Academic API key access):
 
 ```
 python3 run_stf.py
 ```
-5.2) In **'Lite'** mode (using Regular Twitter API key access):
+6.2) In **'Lite'** mode (using Regular Twitter API key access):
 
 ```
 python3 run_stf.py lite
