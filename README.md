@@ -33,7 +33,7 @@ The following is a basic illustration of the Social ThreatFinder framework (in i
 
 ## 2) Instructions for running Social ThreatFinder (STF)
 
-**Updated: 09/18/2022, v0.19 stable release** 
+**Updated: 12/11/2022, v0.22 stable release** 
 
 **Step 1** Create a virtual environment with Python 3.8.10
 
@@ -101,19 +101,31 @@ Check out the three main features of the website, along with an early look below
 
 ![Alt text](/img/stf_map.gif?raw=true "Interactive Map")
 
+<!---
+
 - **STF API:** A REST API which can be used to obtain metadata for all URLs collected by the STF instance running on our servers. It is the easiest way to access STF data without maintaining your own local instance. 
 <p align="center">
 <img src="/img/stf_api_demo.png" width="500" height="280"/>
 </p>
 
-## 4) Experimental features
+-->
+
+## 4) What's new in Build 0.22?
+
+1) The organization targetted by the phishing URL is now identified by analyzing both the URL string as well as the screenshot of the website.
+2) The confidence score of the CNN image identification model is now included in the database. 
+3) Fixed a bug where the CNN image identification label was not being generated in the database.
+4) STF now generates the database in both CSV and sqlite formats. 
+
+## 4) Experimental/Upcoming features
 
 Brief overview of some experimental features that are currently under construction, with plans for release in future stable builds:
 
-1) Identifying new social engineering attacks from narratives shared by users on Twitter, Facebook and Reddit. 
-2) Checking the reliability of new phishing reporters (on Twitter) based on their account heuristics.
-3) An ML based tool which provides better identification\* of whether the website is active/inactive/parked, when compared against other open-source anti-phishing implementations.
-4) Focus on covering smartphone specific social engineering attacks 
+1) We are testing the effectiveness of the ML module to identify whether a website is active/inactive/parked and thus it is not included in this build. We hope to push it out in Build 0.23, to be released towards the end of this month. 
+1) Our module to identify new social engineering attacks from narratives shared by users on Twitter, Facebook and Reddit is moving   along switfy, but being a big update, we dont expect to launch it before February 2023. 
+2) We are so close to finishing our model on identifying the reliability of new phishing reporters (on Twitter) based on their account heuristics. Expected in January 2023.
+4) Focus on covering smartphone specific social engineering attacks is in an early phase. Roll out is TBD. 
+5) Our API is ready, but we commented out any mention of the it in this build, because we want to do a whole section on the APU in this Readme alongside the website. Launching early February 2023. 
 
 ###### \*Preliminary comparison with URLLib, PhishTank and APWG eCrimeX data.
 
@@ -130,4 +142,4 @@ If you like this work, please consider citing our publication:
   organization={IEEE}
 }
 ```
-For any queries, feel free to reach out to Sayak Saha Roy (sayak.saharoy@mavs.uta.edu) and Shirin Nilizadeh (shirin.nilizadeh@uta.edu).
+For any queries, feel free to reach out to Sayak Saha Roy (sayak.saharoy@mavs.uta.edu) or Shirin Nilizadeh (shirin.nilizadeh@uta.edu).
