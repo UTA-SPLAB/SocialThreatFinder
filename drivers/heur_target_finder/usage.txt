@@ -1,0 +1,6 @@
+python3 find_target_driver.py <url-id> <url>
+
+<url-id> can be any integer number
+<url> is the url you want to determine the target for
+
+

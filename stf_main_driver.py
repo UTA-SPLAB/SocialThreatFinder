@@ -13,13 +13,28 @@ from drivers.screenshot import take_screenshot
 from drivers.get_place import country_city
 # from drivers.populate import * # Contains populate_from_database and build_map functions. For fetching data from database and populating the map. Removed from open-source release 0.19 onwards.
 #from drivers.front_end import create_frontend # Generate front-end UI. Removed from open source release 0.19 onwards.
-from drivers.find_phish_target import find_phish_target # Get the targetted organization of the tweet
+
+# --- Old target finder -----
+#from drivers.find_phish_target import find_phish_target # Get the targetted organization of the tweet
+
+from drivers.heur_target_finder.find_target_driver import target_driver
+
+
 from drivers.hideOutput import blockPrint,enablePrint # Module to hide stdout console output
 
 # ML-models
 
-from drivers.predict_url_activity import check_if_active_ml # CNN model to check if URL is active
+# -- CNN image phishing model --
 
+from drivers.cnn_image_phishing.predict import run_model # Gives classification and confidence score
+
+# -- CNN model to check if website is active
+
+# from drivers.predict_url_activity import check_if_active_ml # CNN model to check if URL is active
+
+# Convert CSV to sqlite db
+
+from drivers.convert_to_sqlite import convert_now
 
 ''' 3rd party/native libraries 
 '''
@@ -76,13 +91,13 @@ def urlchecker(url):
    print(w)
    time.sleep(5)
 
-def database_handler(tweet_id,processed_url,registrar_name,ip_address,url_activity,new_cords,place,creation_date,image_url,target,ml_phish_verdict_text):
+def database_handler(tweet_id,processed_url,registrar_name,ip_address,url_activity,new_cords,place,creation_date,image_url,target,ml_phish_label,ml_phish_score):
     check_if_db_file_exists=file_exists('database/db_unsorted.csv')
     if not registrar_name:
         registrar_name='Private'
     if(check_if_db_file_exists==True):
 
-        fields=[tweet_id,processed_url,registrar_name,ip_address,url_activity,new_cords,place,creation_date,image_url,target]
+        fields=[tweet_id,processed_url,registrar_name,ip_address,url_activity,new_cords,place,creation_date,image_url,target,ml_phish_label,ml_phish_score]
         with open(r'database/db_unsorted.csv', 'a') as f:
 
             writer = csv.writer(f)
@@ -91,8 +106,8 @@ def database_handler(tweet_id,processed_url,registrar_name,ip_address,url_activi
             # Sorting the database by date so the newer entries come first.
 
     else:
-        headers=['Tweet_id','URL','registrar_name','ip_address','URL is alive','Geo co-ordinates','Location','Creation_time','image_url','Target','ML_verdict(Experimental)']
-        fields=[tweet_id,processed_url,registrar_name,ip_address,url_activity,new_cords,place,creation_date,image_url,target,ml_phish_verdict_text]
+        headers=['Tweet_id','URL','registrar_name','ip_address','URL is alive','Geo co-ordinates','Location','Creation_time','image_url','Target','cnn_image_verdict','cnn_image_confidence_score']
+        fields=[tweet_id,processed_url,registrar_name,ip_address,url_activity,new_cords,place,creation_date,image_url,target,ml_phish_label,ml_phish_score]
         with open(r'database/db_unsorted.csv', 'a') as f:
             writer = csv.writer(f)
             writer.writerow(headers)
@@ -255,37 +270,39 @@ def process(filename):
                     #target=fetch_target(hashtags) # Depriciated in 0.17 due to target being identifiable from tweet text itself
 
 
-                    print("Process: Find targetted organization")
-                    target=find_phish_target(tweet_text)
-                    if target==None:
-                        target="Unknown"
+                    # Fetch website target by looking at URL and image
 
 
                     print("Process: Get image of the URL for ML verdict")
-                    take_screenshot(tweet_id,final_url)
+                    take_screenshot(str(tweet_id),str(final_url))
                     print("Taken screenshot, sleeping")
                     
                     # EXPERIMENTAL FEATURE == CNN classifier to predict if the website is phishing
                     # This is an early model, and will be improved upon on subsequent iterations
 
-                    print("Process: Predict if URL is active")
+                    print("Process: Predict if URL is phishing using CNN model")
                     
                     try:
-                        ml_phish_verdict=check_if_active_ml(f"{tweet_id}.png")
-                        if ml_phish_verdict==1:
-                            ml_phish_verdict_text="Active phish"
-                            print(f"Website {tweet_id} is phishing.")
-                        elif ml_phish_verdict==0:
-                            print(f"Website {tweet_id} is benign.")
-                            ml_phish_verdict_text="Benign/Inactive"
-                        
+                        ml_phish_verdict=run_model(f"screens/{tweet_id}.png")
+                        ml_phish_score=ml_phish_verdict[1]
+                        ml_phish_label=ml_phish_verdict[0]
+
+                        #ml_phish_verdict_text=f"{ml_phish_label}|{ml_phish_score}"  
+                        #print(ml_phish_verdict_text)
+
                     except Exception as e:
                         print(e)
                         print(f"Unexpected error for Website {tweet_id}") # This will occur when image is not present
                         ml_phish_verdict_text="Unknown"
 
+                    print("Process: Find targetted organization")
+                    #target=find_phish_target(tweet_text)
+                    target=target_driver(str(tweet_id),str(final_url))
 
-                    database_handler(tweet_id, processed_url,registrar_name,ip_address,url_activity,new_cords,place,creation_date,image_url,target,ml_phish_verdict_text)
+                    target=target[0]
+
+
+                    database_handler(tweet_id, processed_url,registrar_name,ip_address,url_activity,new_cords,place,creation_date,image_url,target,ml_phish_label,ml_phish_score)
                  
 
                 except Exception as e: 
@@ -296,6 +313,8 @@ def process(filename):
    
 
 def run_iteration():
+
+
 
     try:
         if sys.argv[1]=='lite':
@@ -312,5 +331,17 @@ def run_iteration():
     
     process('phishing_hxxp')
     
+    # Deleting outdated dataset
+    try:
+        os.system("rm database/threatfinder.db")
+    except:
+        pass
+    # Convert ThreatFinder DB to SQLite
+    # Saved in database/threatfinder.db
+    print("Process: Generating new SQLite database")
+    try:
+        convert_now()
+    except Exception as e:
+        print(e)
 
 
