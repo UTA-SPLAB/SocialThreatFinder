@@ -29,7 +29,7 @@ This repository includes all the core functionality which powers the Social Thre
 
 The following is a basic illustration of the Social ThreatFinder framework (in its current stable state). Note that we have several experimental features (non-stable) **(See Section 4)**, that have not been included in this illustration.  
 
-![Alt text](/img/stf_framework.png?raw=true "Social ThreatFinder Framework")
+![Alt text](/img/stf_framework.png?raw=true "Social ThreatFinder Framework",width=100)
 
 ## 2) Instructions for running Social ThreatFinder (STF)
 
